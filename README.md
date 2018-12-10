@@ -31,7 +31,9 @@ java -jar build/libs/sse-0.1-all.jar --bootstrap=pulsar://localhost
 java -cp build/libs/sse-0.1-all.jar io.streamz.sse.producer.Main -m 'testing' -c 10
 
 #### Running the SSE consumer
-java -cp build/libs/sse-0.1-all.jar io.streamz.sse.consumer.Main
+java -cp build/libs/sse-0.1-all.jar io.streamz.sse.consumer.Main -n 'subscriptionName'
 
 #### Running the SSE consumer starting from a message id
-java -cp build/libs/sse-0.1-all.jar io.streamz.sse.consumer.Main -f messageId -n subN
+java -cp build/libs/sse-0.1-all.jar io.streamz.sse.consumer.Main -f messageId -n 'subscriptionName'
+
+Run multiple consumers to simulate receing events from a topic across multiple channels.
